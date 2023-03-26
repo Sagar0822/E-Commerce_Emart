@@ -4,6 +4,7 @@ import com.ECommerce.Emart.Enum.ProductCategory;
 import com.ECommerce.Emart.Enum.ProductStatus;
 import jdk.jfr.Category;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.bytebuddy.agent.builder.AgentBuilder;
@@ -16,6 +17,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Table(name = "productS")
 public class Product {
 
@@ -30,7 +32,7 @@ public class Product {
     private int quantity;
 
     @Enumerated(EnumType.STRING)
-    private ProductCategory Productcategory;
+    private ProductCategory productCategory;
 
     @Enumerated(EnumType.STRING)
     private ProductStatus productStatus;
