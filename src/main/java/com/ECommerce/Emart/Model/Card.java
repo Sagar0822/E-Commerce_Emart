@@ -2,6 +2,7 @@ package com.ECommerce.Emart.Model;
 
 import com.ECommerce.Emart.Enum.CardType;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +12,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Table(name = "card")
 public class Card {
 
@@ -24,7 +26,7 @@ public class Card {
     private int cvv;
 
     @Enumerated(EnumType.STRING)
-    private CardType cardtype;
+    private CardType cardType;
 
     @ManyToOne
     @JoinColumn

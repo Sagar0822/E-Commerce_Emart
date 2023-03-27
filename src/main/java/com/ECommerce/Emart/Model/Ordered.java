@@ -3,7 +3,6 @@ package com.ECommerce.Emart.Model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.apache.catalina.LifecycleState;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -15,7 +14,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "customer")
+@Table(name = "ordered")
 public class Ordered {
 
     @Id
@@ -36,5 +35,5 @@ public class Ordered {
     Customer customer;
 
     @OneToMany(mappedBy = "order",cascade = CascadeType.ALL)
-    List<Item> Ordereditems = new ArrayList<>();
+    List<Item> OrderedItems = new ArrayList<>();
 }
